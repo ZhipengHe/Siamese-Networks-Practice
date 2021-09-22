@@ -19,3 +19,6 @@
 # BibTeX
 *.bbl
 *.blg
+
+# jupyter nootbook cache
+.ipynb_checkpoints/

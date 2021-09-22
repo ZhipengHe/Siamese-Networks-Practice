@@ -57,6 +57,24 @@ We approach this task as a regression problem. For every item and shop pair, we 
 In the Sales train dataset, it only provides the sale within one day, but we need to predict the sale of next month. So we sum the day's sale into month's sale group by item, shop, date(within a month).
 In the Sales train dataset, it only contains two columns(item id and shop id). Because we need to provide the sales of next month, we add a date column for it, which stand for the date information of next month.
 
+\subsection{Loss Functions}
+
+Contrastive loss function
+
+\begin{equation}
+  \mathcal{L}_c (P_i,P_j)=
+  \begin{cases}
+  \frac{1}{2} D(P_i,P_j)^2, & \text{if } y_{i,j}=0 \\
+  \frac{1}{2} \max(0,m-D(P_i,P_j))^2, & \text{if } y_{i,j}=1
+  \end{cases}
+\end{equation}
+
+Triplet loss function
+
+\begin{equation}
+  \mathcal{L}_h= \sum_{i=1}^N \max(0, m+D(P_i^a,P_i^+)^2-D(P_i^+,P_i^-)^2)   
+\end{equation} 
+
 \subsection{Headings: second level}
 \lipsum[5]
 \begin{equation}

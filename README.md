@@ -3,8 +3,7 @@
 
 #### Task
 
-To implement a deep neural network classifier to predict whether two images belong
-to the same class.
+To implement a deep neural network classifier to predict whether two images belong to the same class.
 
 #### Dataset
 
@@ -16,7 +15,11 @@ to the same class.
 ##### Loss Function
 
 - contrastive loss function
+![contrastive loss function](contrastive_loss_function.png)
+
 - triplet loss function
+![triplet loss function](triplet_loss_function.png)
+
 
 #### References
 
